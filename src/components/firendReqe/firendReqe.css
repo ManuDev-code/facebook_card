@@ -1,0 +1,19 @@
+.request {
+    background: var(--color-card);
+    margin: 20px 10px;
+    border-radius: 1rem;
+    padding: 14px;
+    width: 80%;
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+}
+
+.request h5 {
+    font-size: .9rem;
+}
+.request .action {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
