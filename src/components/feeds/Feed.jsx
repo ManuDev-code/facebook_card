@@ -10,16 +10,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComment, faHeart, faListDots, faShare } from '@fortawesome/free-solid-svg-icons'
 
 // Estados
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Feed({fed}) {
 
     // Manipulación de estados
     let [openComment, setOpenComment] = useState(false);
+    let [contador, setContador] = useState(0)
 
     const commentHandler = () =>{
         setOpenComment(!openComment)
     };
+
+    useEffect(()=>{
+        console.log("Componente cargado por primera vez");
+    }, [contador])
 
   return (
     <div className='feed' key={fed.userid}>
@@ -40,8 +45,9 @@ export default function Feed({fed}) {
             <img src={fed.feedImage} alt="" />
         </div>
         <div className="bottom-content">
-            <div className="action-item">
-                <span><FontAwesomeIcon icon={faHeart}/> 20 Likes</span>
+            <div className="action-item" onClick={()=> {setContador(contador++)
+            console.log(contador)}}>
+                <span><FontAwesomeIcon icon={faHeart}/> {contador}</span>
             </div>
             <div className="action-item" onClick={commentHandler}>
                 <span><FontAwesomeIcon icon={faComment}/> 5 Comentarios</span>
