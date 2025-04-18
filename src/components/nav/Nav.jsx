@@ -20,7 +20,7 @@ export default function Nav() {
         {/*........................NavAria Left........................*/}
         <div className="nav-left">
           <Link to={'/'}>
-            <h3 className='logo'>mAcAiSyU</h3>
+            <h3 className='logo'>MACAISJU</h3>
           </Link>
           <Link to={'/'}>
             <FontAwesomeIcon icon={faHome} />

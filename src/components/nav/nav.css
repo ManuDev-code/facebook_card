@@ -9,6 +9,8 @@ nav {
   z-index: 10;
   background: var(--color-card);
   top: 0;
+  background-color: #6c63ff;
+  color: azure;
 }
 
 .nav-container {
@@ -17,24 +19,34 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
-
+.nav-container .user h4{
+color: azure;
+}
 
 .nav-container a {
     color: var(--color-primary);
     font-size: 1.1rem;
-
+    color: azure;
 }
 
 .nav-left {
   display: flex;
   align-items: center;
   gap: 30px;
+  color: azure;
 }
+
 
 .logo {
     color: var(--color-primary);
     font-size: 1.6rem;
     font-weight: 400;
+    color: azure;
+    transition: transform 0.4s ease; 
+}
+
+.nav-container .logo:hover{
+  transform: scale(0.85);
 }
 
 .Nav-Serchbar {
@@ -44,16 +56,25 @@ nav {
     border: 1px solid var(--color-border);
     border-radius: 2rem;
     padding: 5px 10px;
+
 }
 
 .Nav-Serchbar input {
     background: transparent;
     color: var(--color-primary);
+    
 }
-
+.nav-container img {
+  transition: transform 0.4s ease; 
+}
+.nav-container img:hover{
+  transform: scale(1.3);
+  
+}
 .nav-right {
     display: flex;
     align-items: center;
     gap: 30px;
+    color: azure;
 }
 

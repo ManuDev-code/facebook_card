@@ -1,9 +1,10 @@
 import './feeds.css'
 import { Link } from 'react-router-dom'
 
+
 // Componentes
 import Comment from '../comment/Comment'
-
+import Share from './Share'
 
 // Iconos de FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -17,7 +18,11 @@ export default function Feed({fed}) {
     // Manipulación de estados
     let [openComment, setOpenComment] = useState(false);
     let [contador, setContador] = useState(0)
+    let [openShare, setOpenShare] = useState(false);
 
+const shareHandler = () => {
+    setOpenShare(!openShare);
+};
     const commentHandler = () =>{
         setOpenComment(!openComment)
     };
@@ -52,10 +57,11 @@ export default function Feed({fed}) {
             <div className="action-item" onClick={commentHandler}>
                 <span><FontAwesomeIcon icon={faComment}/> 5 Comentarios</span>
             </div>
-            <div className="action-item">
-                <span><FontAwesomeIcon icon={faShare}/> 3 Compartidos</span>
+            <div className="action-item" onClick={shareHandler}>
+            <span><FontAwesomeIcon icon={faShare}/> 3 Compartidos</span>
             </div>
         </div>
+        {openShare && <Share fed={fed} />}
         {openComment && <Comment />}
     </div>
   )
