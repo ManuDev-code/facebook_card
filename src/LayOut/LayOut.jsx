@@ -2,7 +2,7 @@ import React from 'react'
 
 // Páginas
 import Login from '../pages/Login/Login';
-import Signup from '../pages/signup/signup';
+import Signup from '../pages/Signup/Signup';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import Home from '../pages/Home/Home';
 import Profile from '../pages/Profile/Profile';

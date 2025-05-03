@@ -22,7 +22,7 @@ export default function ChatBox() {
                   <h5>{CurrentUserData.map(user =>(user.username))}</h5>
               </div>
         </div>
-        <div className="chat-box-bottom">
+        <div className="-">
           <form action="#">
             <input type="text" placeholder='Escribe algo' />
             <button type='submit' className='btn btn-primary'>
